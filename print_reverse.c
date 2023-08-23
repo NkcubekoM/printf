@@ -1,4 +1,3 @@
-#include "main.h"
 
 /**
  * print_reverse - Prints reverse string.
