@@ -1,13 +1,17 @@
 #include "main.h"
 
-int print_string(char *string)
-	{
-		int count = 0;
+int print_unsigned(unsigned int value)
+{
+	int count = 0;
+  
+/* Remove the last digit of number first and print 
+ * the remaining digits using recursion, then print
+ *  the last digit
+ */
+	if (value/10)
+	count += print_decimal(value/10);
 
-	for (int i = 0; string[i] != '\0'; i++)
+	count += _putchar(value%10 + '0');
 
-	{
-		count += _putchar (string[i]);
-	}
-	return(count);
-	}
+	return (count);
+}
